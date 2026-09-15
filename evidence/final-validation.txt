@@ -1,0 +1,8 @@
+PASS - photo frame CSS added
+PASS - old hover lift restored
+PASS - huge gradient image box removed
+PASS - two photo frames updated
+PASS - music player remains
+PASS - no exam tab
+
+TOTAL: 6/6 passed.

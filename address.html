@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link
+    rel="icon"
+    href="https://samsales581-sys.github.io/Thirdy-Portfolio/favicon.png"
+    type="image/png"
+>
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Portfolio - Address
+</title>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.nav-link {
+
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    color: #ffffff;
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+
+    color: #ff6b6b;
+    text-shadow:
+        0 0 10px
+        rgba(255,107,107,0.8),
+        0 0 22px
+        rgba(255,107,107,0.5);
+}
+
+.nav-link.active {
+    color: #ff6b6b;
+}
+
+.card {
+
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    padding: 1.2rem;
+    background-color:
+        #1a1a1a;
+    border-radius: 10px;
+    border-left:
+        4px solid #ff6b6b;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.card:hover {
+    background-color: #222222;
+    transform: translateX(5px);
+    box-shadow: none;
+}
+
+
+.card-link {
+    color: #cccccc;
+    text-decoration: none;
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+.card-link:hover {
+    color: #ff6b6b;
+    text-shadow:
+        0 0 8px
+        rgba(255,107,107,0.7);
+}
+
+.map-btn {
+    display: inline-block;
+    padding:
+        0.5rem 1.2rem;
+    background:
+        linear-gradient(
+            135deg,
+            #ff2200,
+            #cc1100
+        );
+
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow:
+        0 4px 15px
+        rgba(255,34,0,0.4);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.map-btn:hover {
+    transform:
+        translateY(-3px);
+    box-shadow:
+        0 8px 30px
+        rgba(255,34,0,0.7),
+        0 0 20px
+        rgba(255,107,107,0.4);
+}
+
+.address-section {
+    height: 100vh;
+    height: 100dvh;
+    padding:
+        90px 5% 20px;
+    overflow: hidden;
+}
+
+@media (max-width: 850px) {
+    body {
+        overflow-y: auto;
+    }
+    .address-section {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+        padding:
+            120px 5% 50px;
+    }
+    nav ul {
+        gap: 18px !important;
+        justify-content:
+            center !important;
+        flex-wrap:
+            wrap !important;
+    }
+}
+
+</style>
+</head>
+<body
+style="
+    font-family:
+    'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+    background-color:#1a0000;
+    background-image:
+    radial-gradient(
+        ellipse at bottom left,
+        rgba(204,17,0,0.55) 0%,
+        rgba(136,0,0,0.25) 35%,
+        transparent 60%
+    ),
+    radial-gradient(
+        ellipse at top right,
+        rgba(204,17,0,0.55) 0%,
+        rgba(136,0,0,0.25) 35%,
+        transparent 60%
+    ),
+    radial-gradient(
+        ellipse at bottom right,
+        rgba(153,0,0,0.20) 0%,
+        transparent 45%
+    ),
+    radial-gradient(
+        ellipse at top left,
+        rgba(153,0,0,0.18) 0%,
+        transparent 45%
+    );
+    color:#ffffff;
+  overflow-x:hidden;
+"
+>
+
+
+<nav
+style="
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color:
+    rgba(0,0,0,0.95);
+    padding:
+    1.5rem 5%;
+    z-index:1000;
+"
+>
+
+<ul
+style="
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    list-style:none;
+    gap:3rem;
+    margin:0;
+    padding:0;
+    flex-wrap:nowrap;
+"
+>
+
+<li>
+<a
+    href="index.html"
+    class="nav-link"
+>
+Home
+</a>
+</li>
+
+
+<li>
+<a
+    href="about.html"
+    class="nav-link"
+>
+About
+</a>
+</li>
+
+
+<li>
+<a
+    href="contact.html"
+    class="nav-link"
+>
+Contact
+</a>
+</li>
+
+
+<li>
+<a
+    href="address.html"
+    class="nav-link active"
+>
+Address
+</a>
+</li>
+
+
+</ul>
+</nav>
+
+<section
+class="address-section"
+>
+<div
+style="
+    max-width:1200px;
+
+    margin:0 auto;
+"
+>
+
+<div
+style="
+    text-align:center;
+    margin-bottom:2rem;
+"
+>
+<h1
+style="
+    font-size:3.2rem;
+
+    font-weight:700;
+
+    margin-bottom:.7rem;
+
+    margin-top:0;
+"
+>
+Find
+
+<span
+style="
+    color:#ff6b6b;
+"
+>
+
+Me
+
+</span>
+
+</h1>
+
+
+<p
+style="
+    font-size:1.1rem;
+    color:#cccccc;
+    margin:0;
+"
+>
+
+Here's where you can find me
+and contact me
+
+</p>
+
+</div>
+
+
+<div>
+
+
+<h2
+style="
+    font-size:1.8rem;
+    margin-bottom:1.2rem;
+    margin-top:0;
+    color:#ff6b6b;
+"
+>
+
+Location Details
+
+</h2>
+
+
+<div class="card">
+
+
+<i
+class="fas fa-map-marker-alt"
+
+style="
+    font-size:2rem;
+
+    color:#ff6b6b;
+
+    margin-right:1.5rem;
+
+    margin-top:.3rem;
+
+    width:40px;
+
+    text-align:center;
+
+    flex-shrink:0;
+"
+></i>
+
+
+<div>
+
+<h3
+style="
+    font-size:1.3rem;
+
+    margin-bottom:.5rem;
+
+    margin-top:0;
+"
+>
+
+Home Address
+
+</h3>
+
+
+<p
+style="
+    color:#cccccc;
+
+    font-size:1.05rem;
+
+    line-height:1.5;
+
+    margin:
+    0 0 .75rem 0;
+"
+>
+
+310 Gomburza Street
+<br>
+
+Naggasican
+<br>
+
+Santiago City,
+Isabela 3311
+<br>
+
+Philippines
+
+</p>
+
+
+<a
+href="https://maps.app.goo.gl/MshQMnpGr8JeG7Vh6"
+
+target="_blank"
+
+rel="noopener"
+
+class="map-btn"
+>
+
+<i
+class="fas fa-map-marked-alt"
+
+style="
+    margin-right:.4rem;
+"
+></i>
+
+Open in Google Maps
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<i
+class="fas fa-envelope"
+
+style="
+    font-size:2rem;
+
+    color:#ff6b6b;
+
+    margin-right:1.5rem;
+
+    margin-top:.3rem;
+
+    width:40px;
+
+    text-align:center;
+
+    flex-shrink:0;
+"
+></i>
+
+
+<div>
+
+<h3
+style="
+    font-size:1.3rem;
+
+    margin-bottom:.5rem;
+
+    margin-top:0;
+"
+>
+
+Email Address
+
+</h3>
+
+
+<p
+style="
+    color:#cccccc;
+
+    font-size:1.1rem;
+
+    line-height:1.6;
+
+    margin:0;
+"
+>
+
+<a
+href="mailto:samsales581@gmail.com"
+
+class="card-link"
+>
+
+samsales581@gmail.com
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<i
+class="fas fa-phone"
+
+style="
+    font-size:2rem;
+
+    color:#ff6b6b;
+
+    margin-right:1.5rem;
+
+    margin-top:.3rem;
+
+    width:40px;
+
+    text-align:center;
+
+    flex-shrink:0;
+"
+></i>
+
+
+<div>
+
+<h3
+style="
+    font-size:1.3rem;
+
+    margin-bottom:.5rem;
+
+    margin-top:0;
+"
+>
+
+Contact Number
+
+</h3>
+
+
+<p
+style="
+    color:#cccccc;
+
+    font-size:1.1rem;
+
+    line-height:1.6;
+
+    margin:0;
+"
+>
+
+<a
+href="tel:09069418354"
+
+class="card-link"
+>
+
+0906-941-8354
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+</body>
+</html>

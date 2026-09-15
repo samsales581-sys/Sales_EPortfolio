@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link href="https://samsales581-sys.github.io/Thirdy-Portfolio/favicon.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio - About</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+.nav-link{text-decoration:none;font-size:1.1rem;font-weight:500;letter-spacing:1px;white-space:nowrap;color:#fff;transition:color .3s ease,text-shadow .3s ease}
+.nav-link:hover{color:#ff6b6b;text-shadow:0 0 10px rgba(255,107,107,.8),0 0 22px rgba(255,107,107,.5)}
+.nav-link.active{color:#ff6b6b}
+.card{transition:background-color .3s ease,transform .3s ease,box-shadow .3s ease}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: none;
+    background-color: #1a1a1a !important;
+}
+/* About/Motivation photos: no large background box; use the original hover feel */
+.about-photo-frame{
+  width:400px;
+  height:400px;
+  border:5px solid #ff6b6b;
+  border-radius:20px;
+  background:transparent;
+  padding:0;
+  overflow:hidden;
+  box-shadow:none;
+  box-sizing:border-box;
+  transition:background-color .3s ease,transform .3s ease,box-shadow .3s ease;
+}
+.about-photo-frame:hover {
+    transform: translateY(-10px);
+    box-shadow: none;
+}
+.about-photo-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:15px;
+  display:block;
+}
+.play-btn{display:inline-block;padding:.3rem 1rem;background:#667eea;color:#fff;border-radius:5px;text-decoration:none;font-size:.85rem;cursor:pointer;transition:background-color .3s ease,box-shadow .3s ease}
+.play-btn:hover{background:#5a6fd6;box-shadow:0 4px 18px rgba(102,126,234,.7),0 0 30px rgba(102,126,234,.35)}
+@media(max-width:900px){
+nav ul{gap:18px!important;justify-content:center!important;flex-wrap:wrap!important}
+.bio-grid,.motivation-grid{grid-template-columns:1fr!important}
+.hobby-row{flex-direction:column}
+}
+
+
+/* Spotify music section */
+.music-card{
+    overflow:hidden;
+}
+.music-header{
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+    margin-bottom:1rem;
+}
+.music-logo{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#1db954;
+    color:#071a0d;
+    font-size:1.35rem;
+    box-shadow:0 0 20px rgba(29,185,84,.25);
+}
+.music-subtitle{
+    margin:.2rem 0 0;
+    color:#999;
+    font-size:.78rem;
+}
+.spotify-player-wrap{
+    background:#0d0d0d;
+    border-radius:14px;
+    overflow:hidden;
+    margin-bottom:.9rem;
+}
+.spotify-player-wrap iframe{
+    width:100%;
+    height:152px;
+    border:0;
+    display:block;
+}
+.spotify-now{
+    margin:.2rem 0 .8rem;
+    padding:.7rem .8rem;
+    background:#111;
+    border-radius:9px;
+    border-left:3px solid #1db954;
+}
+.spotify-now strong{
+    display:block;
+    font-size:.9rem;
+}
+.spotify-now span{
+    display:block;
+    color:#999;
+    font-size:.75rem;
+    margin-top:.2rem;
+}
+.spotify-track-list{
+    display:grid;
+    gap:.45rem;
+    margin-bottom:.8rem;
+}
+.spotify-track-btn{
+    width:100%;
+    border:0;
+    background:#111;
+    color:#fff;
+    border-radius:8px;
+    padding:.65rem .75rem;
+    display:grid;
+    grid-template-columns:30px 1fr 24px;
+    gap:.6rem;
+    align-items:center;
+    text-align:left;
+    cursor:pointer;
+    transition:background .2s,transform .2s;
+}
+.spotify-track-btn:hover{
+    background:#242424;
+    transform:translateX(3px);
+}
+.spotify-track-btn.active{
+    background:#202020;
+    box-shadow:inset 3px 0 #1db954;
+}
+.spotify-track-number{
+    color:#777;
+    font-size:.75rem;
+}
+.spotify-track-info{
+    min-width:0;
+}
+.spotify-track-info strong{
+    display:block;
+    font-size:.8rem;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.spotify-track-info small{
+    display:block;
+    color:#888;
+    font-size:.68rem;
+    margin-top:.12rem;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.spotify-track-icon{
+    color:#1db954;
+    text-align:center;
+}
+.spotify-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:.45rem;
+    background:#1db954;
+    color:#08130b;
+    text-decoration:none;
+    border-radius:999px;
+    padding:.65rem .8rem;
+    font-size:.78rem;
+    font-weight:800;
+    transition:all .2s;
+}
+.spotify-link:hover{
+    background:#28d766;
+    box-shadow:0 0 20px rgba(29,185,84,.28);
+    transform:translateY(-1px);
+}
+.spotify-note{
+    font-size:.66rem;
+    color:#777;
+    line-height:1.5;
+    text-align:center;
+    margin:.65rem 0 0;
+}
+@media(max-width:520px){
+    .spotify-player-wrap iframe{
+        height:152px;
+    }
+}
+
+</style>
+</head>
+<body style="margin:0; padding:0; font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; background-color:#1a0000; background-image:radial-gradient(ellipse at bottom left, rgba(204,17,0,0.55) 0%, rgba(136,0,0,0.25) 35%, transparent 60%), radial-gradient(ellipse at top right, rgba(204,17,0,0.55) 0%, rgba(136,0,0,0.25) 35%, transparent 60%), radial-gradient(ellipse at bottom right, rgba(153,0,0,0.20) 0%, transparent 45%), radial-gradient(ellipse at top left, rgba(153,0,0,0.18) 0%, transparent 45%); color:#ffffff; overflow-x:hidden; min-height:100vh;">
+<nav style="position:fixed; top:0; left:0; right:0; background-color:rgba(0,0,0,0.95); padding:1.5rem 5%; z-index:1000; box-sizing:border-box;">
+<ul style="display:flex; justify-content:flex-end; align-items:center; list-style:none; gap:3rem; margin:0; padding:0; flex-wrap:nowrap;">
+<li><a class="nav-link" href="index.html">Home</a></li>
+<li><a class="nav-link active" href="about.html">About</a></li>
+<li><a class="nav-link" href="contact.html">Contact</a></li>
+<li><a class="nav-link" href="address.html">Address</a></li>
+
+</ul>
+</nav>
+<section style="position:relative; z-index:1; min-height:100vh; padding:120px 5% 80px;">
+<div style="max-width:1400px; margin:0 auto;">
+<div style="text-align:center; margin-bottom:4rem;">
+<h1 style="font-size:3.5rem; font-weight:700; margin-bottom:1rem; margin-top:0;">About <span style="color:#ff6b6b;">Me</span></h1>
+<p style="font-size:1.2rem; color:#cccccc; max-width:700px; margin:0 auto;">Get to know more about who I am, what I do, and my journey</p>
+</div>
+<div class="bio-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; margin-bottom:4rem;">
+<div style="display:flex; justify-content:center;">
+<div class="about-photo-frame">
+<img alt="About Me" decoding="async" loading="lazy" src="https://samsales581-sys.github.io/Thirdy-Portfolio/image2.jpg" />
+</div>
+</div>
+<div>
+<h2 style="font-size:2.5rem; margin-bottom:1.5rem; margin-top:0; color:#ff6b6b;">Who Am I?</h2>
+<p style="font-size:1.1rem; line-height:1.8; color:#cccccc; margin-bottom:1.5rem;">Hi, I am Samuel C. Sales Jr., but you can call me Thirdy. I may seem quiet at first because I am naturally shy and more of an introvert, especially in public. I'm not always the loudest person in the room, but I'm someone who observes deeply, listens carefully, and values genuine connections over small talk.</p>
+<p style="font-size:1.1rem; line-height:1.8; color:#cccccc; margin-bottom:1.5rem;">In my free time, I enjoy going to the gym and playing online games. The gym is more than just a hobby for me—it's a place where I build not only physical strength but also discipline, and focus. Playing online games, on the other hand, helps me relax, think strategically, and connect with friends in a different way.</p>
+<p style="font-size:1.1rem; line-height:1.8; color:#cccccc; margin-bottom:1.5rem;">Above all, my faith in God is the foundation of who I am. I strongly believe that everything happens for a reason and that God has a purpose behind every situation—whether it's a good day or a challenging one. During difficult times, I remind myself that there is always a greater plan at work. This belief gives me peace, strength, and hope to keep moving forward no matter what life brings.</p>
+<p style="font-size:1.1rem; line-height:1.8; color:#cccccc; margin-bottom:1.5rem;">I may be quiet, but I carry strong faith, deep thoughts, and big dreams within me.</p>
+</div>
+</div>
+<div style="text-align:center; margin-bottom:4rem;"><h1 style="font-size:3.5rem; font-weight:700; margin-bottom:1rem; margin-top:0;">My <span style="color:#ff6b6b;">Motivation</span></h1></div>
+<div class="motivation-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; margin-bottom:4rem;">
+<div style="display:flex; justify-content:center;">
+<div class="about-photo-frame">
+<img alt="About Me" decoding="async" loading="lazy" src="https://samsales581-sys.github.io/Thirdy-Portfolio/image3.jpg" />
+</div>
+</div>
+<div>
+<p style="font-size:1.1rem; line-height:1.8; color:#cccccc; margin-bottom:1.5rem; margin-top:0;">I am deeply motivated by the presence of this amazing person in my life who has always been there for me at my lowest moments. She has this rare ability to lift my spirit whenever I feel down, reminding me that I am capable of becoming better than I was yesterday.</p>
+<p style="font-size:1.1rem; line-height:1.8; color:#cccccc; margin-bottom:1.5rem;">Her patience, kindness, and understanding inspire me to keep improving myself, not only for her but also for the person I want to become. No matter what mistakes I have made or how I may have hurt her in the past, she remains the reason why I keep moving forward in life with hope.</p>
+<p style="font-size:1.1rem; line-height:1.8; color:#cccccc; margin-bottom:1.5rem;">And I hold on to this promise in my heart:</p>
+<b><i><p style="font-size:1.1rem; line-height:1.8; color:#cccccc;">"With God as our guide and faith as our foundation, someday we will fulfill our dreams together, walking hand in hand toward the future He has prepared for us."</p></i></b>
+</div>
+</div>
+<div style="margin-top:4rem;">
+<h2 style="font-size:2.5rem; text-align:center; margin-bottom:3rem; color:#ff6b6b;">My <span style="color:#ffffff;">Hobbies</span></h2>
+<div class="hobby-row" style="display:flex; gap:1.5rem; align-items:stretch;">
+<div class="card" style="margin:0; flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; background-color:#1a1a1a; padding:2rem; border-radius:15px; border:2px solid #ff6b6b; box-sizing:border-box;">
+<svg style="width:60px; height:60px; margin-bottom:1rem;" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#667eea" height="24" rx="3" width="10" x="2" y="38"></rect><rect fill="#764ba2" height="16" rx="2" width="8" x="10" y="42"></rect><rect fill="#667eea" height="8" rx="3" width="64" x="18" y="46"></rect><rect fill="#764ba2" height="16" rx="2" width="8" x="82" y="42"></rect><rect fill="#667eea" height="24" rx="3" width="10" x="88" y="38"></rect><rect fill="#5a6fd6" height="12" rx="2" width="12" x="44" y="44"></rect>
+</svg>
+<h3 style="margin-bottom:1rem; margin-top:0;">Gym</h3>
+<img alt="My Gym Photo" decoding="async" loading="lazy" src="https://samsales581-sys.github.io/Thirdy-Portfolio/gym-image.jpg" style="width:100%; flex:1; object-fit:cover; border-radius:8px; min-height:0;"/>
+<p style="margin-top:1rem; text-align:center; color:#cccccc;">Don't Stop hangga't hindi ka pa masarap</p>
+</div>
+<div style="display:flex; flex-direction:column; gap:1.5rem; flex:1;">
+<div class="card" style="margin:0; display:flex; flex-direction:column; align-items:center; justify-content:center; height:180px; background-color:#1a1a1a; padding:2rem; border-radius:15px; border:2px solid #ff6b6b; box-sizing:border-box;">
+<div style="display:flex; justify-content:center; gap:0.5rem; margin-bottom:0.5rem;"><i class="fab fa-html5" style="color:#e44d26; font-size:1.5rem;"></i><i class="fab fa-css3-alt" style="color:#264de4; font-size:1.5rem;"></i><i class="fab fa-js" style="color:#f7df1e; font-size:1.5rem;"></i></div>
+<h3 style="margin-bottom:0.3rem; font-size:1rem; margin-top:0;">My Game</h3>
+<p style="font-size:0.8rem; text-align:center; color:#aaa; margin-bottom:0.3rem;">A game I've created using HTML, CSS, and JavaScript.</p>
+<a class="play-btn" href="https://samsales581-sys.github.io/Thirdy-Portfolio/game.html" target="_blank">▶ Play Game</a>
+</div>
+<div class="card music-card" style="margin:0; flex:1; display:flex; flex-direction:column; background-color:#1a1a1a; padding:1.25rem; border-radius:15px; border:2px solid #ff6b6b; box-sizing:border-box; min-height:0;">
+<div class="music-header">
+<div class="music-logo"><i class="fab fa-spotify"></i></div>
+<div>
+<h3 style="margin:0;">My Music</h3>
+<p class="music-subtitle">Play my selected Spotify songs</p>
+</div>
+</div>
+
+<div class="spotify-player-wrap">
+<iframe
+    id="spotifyPlayer"
+    title="Spotify music player"
+    src="https://open.spotify.com/embed/track/2lpygKqzPFtItQ4ss3cgfb?utm_source=generator&theme=0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+</iframe>
+</div>
+
+<div class="spotify-now">
+<strong id="spotifyTitle">Cinderella (feat. Ty Dolla $ign)</strong>
+<span id="spotifyArtist">Mac Miller, Ty Dolla $ign</span>
+</div>
+
+<div class="spotify-track-list">
+<button class="spotify-track-btn active" data-index="0" type="button">
+<span class="spotify-track-number">01</span>
+<span class="spotify-track-info">
+<strong>Cinderella (feat. Ty Dolla $ign)</strong>
+<small>Mac Miller, Ty Dolla $ign</small>
+</span>
+<span class="spotify-track-icon"><i class="fab fa-spotify"></i></span>
+</button>
+
+<button class="spotify-track-btn" data-index="1" type="button">
+<span class="spotify-track-number">02</span>
+<span class="spotify-track-info">
+<strong>Lego House</strong>
+<small>Ed Sheeran</small>
+</span>
+<span class="spotify-track-icon"><i class="fab fa-spotify"></i></span>
+</button>
+
+<button class="spotify-track-btn" data-index="2" type="button">
+<span class="spotify-track-number">03</span>
+<span class="spotify-track-info">
+<strong>Panaginip</strong>
+<small>nicole</small>
+</span>
+<span class="spotify-track-icon"><i class="fab fa-spotify"></i></span>
+</button>
+
+<button class="spotify-track-btn" data-index="3" type="button">
+<span class="spotify-track-number">04</span>
+<span class="spotify-track-info">
+<strong>Passionfruit</strong>
+<small>Drake</small>
+</span>
+<span class="spotify-track-icon"><i class="fab fa-spotify"></i></span>
+</button>
+
+<button class="spotify-track-btn" data-index="4" type="button">
+<span class="spotify-track-number">05</span>
+<span class="spotify-track-info">
+<strong>Every Breath You Take</strong>
+<small>The Police</small>
+</span>
+<span class="spotify-track-icon"><i class="fab fa-spotify"></i></span>
+</button>
+
+<button class="spotify-track-btn" data-index="5" type="button">
+<span class="spotify-track-number">06</span>
+<span class="spotify-track-info">
+<strong>Iris</strong>
+<small>The Goo Goo Dolls</small>
+</span>
+<span class="spotify-track-icon"><i class="fab fa-spotify"></i></span>
+</button>
+
+<button class="spotify-track-btn" data-index="6" type="button">
+<span class="spotify-track-number">07</span>
+<span class="spotify-track-info">
+<strong>How to Save a Life</strong>
+<small>The Fray</small>
+</span>
+<span class="spotify-track-icon"><i class="fab fa-spotify"></i></span>
+</button>
+
+<button class="spotify-track-btn" data-index="7" type="button">
+<span class="spotify-track-number">08</span>
+<span class="spotify-track-info">
+<strong>Merry Christmas, Please Don't Call</strong>
+<small>Bleachers</small>
+</span>
+<span class="spotify-track-icon"><i class="fab fa-spotify"></i></span>
+</button>
+
+<button class="spotify-track-btn" data-index="8" type="button">
+<span class="spotify-track-number">09</span>
+<span class="spotify-track-info">
+<strong>About You</strong>
+<small>The 1975</small>
+</span>
+<span class="spotify-track-icon"><i class="fab fa-spotify"></i></span>
+</button>
+</div>
+
+<a class="spotify-link"
+   href="https://open.spotify.com/track/2lpygKqzPFtItQ4ss3cgfb"
+   id="spotifyLink"
+   rel="noopener"
+   target="_blank">
+<i class="fab fa-spotify"></i>
+Open selected song on Spotify
+</a>
+
+<p class="spotify-note">
+Choose any song from the playlist, then use the Spotify player controls to play it. No local MP3 files are required.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<script>
+(() => {
+    const tracks = [
+        {
+            title: 'Cinderella (feat. Ty Dolla $ign)',
+            artist: 'Mac Miller, Ty Dolla $ign',
+            id: '2lpygKqzPFtItQ4ss3cgfb',
+            spotify: "https://open.spotify.com/track/2lpygKqzPFtItQ4ss3cgfb"
+        },
+        {
+            title: 'Lego House',
+            artist: 'Ed Sheeran',
+            id: '5ubHAQtKuFfiG4FXfLP804',
+            spotify: "https://open.spotify.com/track/5ubHAQtKuFfiG4FXfLP804"
+        },
+        {
+            title: 'Panaginip',
+            artist: 'nicole',
+            id: '6wcjLOGIdmw8BUaRho4c9L',
+            spotify: "https://open.spotify.com/track/6wcjLOGIdmw8BUaRho4c9L"
+        },
+        {
+            title: 'Passionfruit',
+            artist: 'Drake',
+            id: '5mCPDVBb16L4XQwDdbRUpz',
+            spotify: "https://open.spotify.com/track/5mCPDVBb16L4XQwDdbRUpz"
+        },
+        {
+            title: 'Every Breath You Take',
+            artist: 'The Police',
+            id: '1JSTJqkT5qHq8MDJnJbRE1',
+            spotify: "https://open.spotify.com/track/1JSTJqkT5qHq8MDJnJbRE1"
+        },
+        {
+            title: 'Iris',
+            artist: 'The Goo Goo Dolls',
+            id: '6Qyc6fS4DsZjB2mRW9DsQs',
+            spotify: "https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs"
+        },
+        {
+            title: 'How to Save a Life',
+            artist: 'The Fray',
+            id: '5fVZC9GiM4e8vu99W0Xf6J',
+            spotify: "https://open.spotify.com/track/5fVZC9GiM4e8vu99W0Xf6J"
+        },
+        {
+            title: "Merry Christmas, Please Don't Call",
+            artist: 'Bleachers',
+            id: '0UOG0zUn7t8m8QcxfzR7AH',
+            spotify: "https://open.spotify.com/track/0UOG0zUn7t8m8QcxfzR7AH"
+        },
+        {
+            title: 'About You',
+            artist: 'The 1975',
+            id: '3hEfpBHxgieRLz4t3kLNEg',
+            spotify: "https://open.spotify.com/track/3hEfpBHxgieRLz4t3kLNEg"
+        }
+    ];
+
+    const player = document.getElementById("spotifyPlayer");
+    const title = document.getElementById("spotifyTitle");
+    const artist = document.getElementById("spotifyArtist");
+    const spotifyLink = document.getElementById("spotifyLink");
+    const buttons = [...document.querySelectorAll(".spotify-track-btn")];
+
+    function selectTrack(index) {
+        const track = tracks[index];
+
+        player.src =
+            `https://open.spotify.com/embed/track/${track.id}?utm_source=generator&theme=0`;
+
+        title.textContent = track.title;
+        artist.textContent = track.artist;
+        spotifyLink.href = track.spotify;
+
+        buttons.forEach((button, i) => {
+            button.classList.toggle("active", i === index);
+        });
+    }
+
+    buttons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            selectTrack(index);
+        });
+    });
+
+    selectTrack(0);
+})();
+</script></body></html>
