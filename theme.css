@@ -1,1 +1,174 @@
 
+/* Theme toggle button */
+.theme-toggle {
+    border: 2px solid #ff6b6b;
+    background: transparent;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: #ff6b6b;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.45);
+}
+
+
+body.light-mode {
+    background-color: #fff4f4 !important;
+
+    background-image:
+        radial-gradient(
+            ellipse at bottom left,
+            rgba(255, 107, 107, 0.25) 0%,
+            rgba(255, 180, 180, 0.15) 35%,
+            transparent 60%
+        ),
+        radial-gradient(
+            ellipse at top right,
+            rgba(255, 107, 107, 0.25) 0%,
+            rgba(255, 180, 180, 0.15) 35%,
+            transparent 60%
+        ),
+        radial-gradient(
+            ellipse at bottom right,
+            rgba(255, 200, 200, 0.20) 0%,
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at top left,
+            rgba(255, 200, 200, 0.18) 0%,
+            transparent 45%
+        ) !important;
+
+    color: #2b1111 !important;
+}
+
+
+/* Navigation */
+body.light-mode nav {
+    background-color: rgba(255, 248, 248, 0.96) !important;
+    box-shadow: 0 2px 15px rgba(120, 20, 20, 0.12);
+}
+
+body.light-mode .nav-link {
+    color: #381414 !important;
+}
+
+body.light-mode .nav-link:hover {
+    color: #ff6b6b !important;
+
+    text-shadow:
+        0 0 8px rgba(255, 107, 107, 0.4),
+        0 0 15px rgba(255, 107, 107, 0.2);
+}
+
+body.light-mode .nav-link.active {
+    color: #ff6b6b !important;
+}
+
+
+/* Normal paragraphs */
+body.light-mode p {
+    color: #624242 !important;
+}
+
+
+/* Cards */
+body.light-mode .card,
+body.light-mode .music-card {
+    background-color: #fffafa !important;
+    color: #2b1111 !important;
+    border-color: #ff8a8a !important;
+}
+
+body.light-mode .card:hover {
+    background-color: #fff1f1 !important;
+}
+
+
+/* About photos */
+body.light-mode .about-photo-frame {
+    border-color: #ff8a8a !important;
+}
+
+
+/* Spotify area */
+body.light-mode .spotify-player-wrap {
+    background: #f7e6e6 !important;
+}
+
+body.light-mode .spotify-now {
+    background: #fff1f1 !important;
+    color: #2b1111 !important;
+}
+
+body.light-mode .spotify-now span {
+    color: #795858 !important;
+}
+
+body.light-mode .spotify-track-btn {
+    background: #fff1f1 !important;
+    color: #2b1111 !important;
+}
+
+body.light-mode .spotify-track-btn:hover {
+    background: #ffe2e2 !important;
+}
+
+body.light-mode .spotify-track-btn.active {
+    background: #ffdada !important;
+    box-shadow: inset 3px 0 #1db954 !important;
+}
+
+body.light-mode .spotify-track-info small,
+body.light-mode .music-subtitle,
+body.light-mode .spotify-note {
+    color: #795858 !important;
+}
+
+
+/* Theme button when Light Mode is active */
+body.light-mode .theme-toggle {
+    background: #ff6b6b;
+    color: #ffffff;
+    border-color: #ff6b6b;
+}
+
+body.light-mode .theme-toggle:hover {
+    background: #e95656;
+}
+
+
+/* Smooth theme transition */
+body,
+nav,
+.card,
+.music-card,
+.spotify-now,
+.spotify-track-btn {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Mobile */
+@media (max-width: 900px) {
+    .theme-toggle {
+        font-size: 0.8rem;
+        padding: 7px 12px;
+    }
+}
